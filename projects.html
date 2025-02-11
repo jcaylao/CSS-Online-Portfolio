@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Online Portfolio with HTML ONLY">
+    <meta name="keywords" content="HTML">
+    <meta name="author" content="Jaira">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects page</title>
+    <style>
+        /*Styling my custom element TESTING*/
+        my-layout {
+            display: block; /* Ensure the custom element behaves as a block */
+        }
+
+        my-layout nav {
+            width: 100%;
+            background-color: #333;
+            color: #fff;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        my-layout nav h1 {
+            text-align: center;
+        }
+
+        my-layout nav ul {
+            list-style: none; /* Remove bullet points */
+            padding: 0;
+            margin: 0;
+            display: flex; /* horizontal layout */
+            gap: 20px; /* Space between navigation items */
+        }
+
+        my-layout nav ul li a {
+            color: #fff; /* White text for links */
+            text-decoration: none; /* Remove underline */
+            font-size: 1.1em;
+            padding: 10px 15px;
+            transition: background-color 0.3s ease; /* Smooth hover effect */
+        }
+
+        my-layout nav ul li a:hover {
+            background-color: #daa9e1; /* Highlight color on hover */
+            color: #333; /* Dark text on hover for contrast */
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="navigationBar>">
+            <my-layout>
+                <nav>
+                    <h1>Jaira's Online Portfolio</h1>
+                    <ul>
+                        <li><a href="index.html">About Me</a></li>
+                        <li><a href="skills.html">Skills</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="contact.html">Contact Me</a></li>
+                        <li><a href="experiments.html">Experiments</a></li>
+                    </ul>
+                </nav>
+            </my-layout>
+        </div><hr>
+    </header>
+
+    <main>
+        <table>
+            <caption><h2>Projects</h2></caption>
+            <colgroup>
+                <col span="2" style="background-color:lightblue">
+            </colgroup>
+            <tr>
+                <th>Preview</th>
+                <th>Video Demo</th>
+            </tr>
+            <tr>
+                <td>
+                    <figure>
+                        <img src="images/GROCERY-APP.png" alt="GROCERY-APP" width="500" height="300">
+                        <figcaption>Grocery and Cooking App</figcaption>
+                    </figure>
+                    <details>
+                        <summary>
+                            Project Description
+                        </summary>
+                        <p>
+                            A grocery and cooking app that allows users to easily find new recipes and keep track
+                            of their groceries. One feature is recipe tinder, in which users are given a recipe
+                            and they can choose to like or dislike a recipe. Another feature is a receipt scanner
+                            that allows users to scan their receipts and upload it to their virtual pantry.
+                        </p>
+                    </details>
+                </td>
+                <td>
+                    <video controls height="300" width="550">
+                        <source src="images/GroceryAppDemo.mp4" type="video/mp4">
+                        <div class="error">Your browser does not support the video tag.</div>
+                    </video>
+                </td>
+            </tr>
+        </table>
+    </main>
+
+    <noscript>Javascript is disabled, some features may not work properly.</noscript>
+    <script>
+        // Placeholder for JavaScript
+    </script>
+</body>
+</html>
