@@ -9,12 +9,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About me page</title>
     <style>
+        :root {
+            --primary-bg: white;
+            --text-color: black;
+            --nav-bg: #6d2932;
+            --nav-ul-li-a-text-color: white;
+            --nav-ul-li-a-hover-bg-color: #97595e;
+            --nav-ul-li-a-hover-text-color: white;
+
+        }
+        body {
+            font-family: Comic Sans MS, Comic Sans, cursive;
+        }
         .container {
             display: grid;
             grid-template-columns: repeat(auto-fill, 250px);
             grid-template-rows: repeat(auto-fill, 50px);
             grid-template-areas:
-                "   .         header   header   .     nav"
                 "   aboutMe   aboutMe   .   .         nav"
                 "   .   .   .               picture   nav"
                 "   hgroup   hgroup   hgroup   .      nav"
@@ -74,9 +85,11 @@
 
 <body>
     <main class="container">
-        <header>
-            <h1>Jaira's Online Portfolio</h1>
-        </header>
+        <section class="aboutMe">
+            <h3>Hi! My name is</h3>
+            <h2>Jaira Caylao</h2>
+            <h3>UX/UI Designer & Developer</h3>
+        </section>
 
         <nav id = "nav-sidebar">
             <ul>
@@ -87,12 +100,6 @@
             </ul>
         </nav>
 
-
-        <section class="aboutMe">
-            <h3>Hi! My name is</h3>
-            <h2>Jaira Caylao</h2>
-            <h3>UX/UI Designer & Developer</h3>
-        </section>
         <hgroup>
             <h2>About Me</h2>
             <p>I specialize in creating user-friendly websites and apps, as they are easy to use and navigate in order
@@ -103,9 +110,9 @@
             </p>
         </hgroup>
         <picture>
-            <source srcset="images/CARTOON-ME.webp" type="image/webp" height="200" width="100">
-            <source srcset="images/CARTOON-ME.jpg" type="image/jpeg" height="200" width="100">
-            <img src="images/CARTOON-ME.png" alt="cartoon me" height="200" width="100">
+            <source srcset="images/selfPortrait.webp" type="image/webp" width="80%">
+            <source srcset="images/selfPortrait.jpg" type="image/jpeg" width="80%">
+            <img src="images/selfPortrait.png" alt="cartoon me" width="295">
         </picture>
     </main>
 
