@@ -10,11 +10,69 @@
     <link href="styles/main.css" rel="stylesheet">
     <title>Skills page</title>
     <style>
+        .container {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(auto-fill, 150px);
+            grid-template-areas:
+            "   .   h2  .    . nav"
+            "   .   skill1   skill2    .    nav"
+            "   .   skill3   skill4    .    nav"
+            "   .   .   .              .    nav";
+        }
+        /* Nav bar styling */
+        nav {
+            grid-area: nav;
+            background-color: #6d2932;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li a {
+            display: block;
+            width: 100%;
+            padding: 20px 0 20px 5px;
+            text-decoration: none;
+            color: white;
+            font-size: calc(1.2dvw + 1dvh);
+            background: transparent;
+        }
+        nav ul li a:hover {
+            background: #97595e;
+            color: #fff;
+        }
+
+        h2 {
+            grid-area: h2;
+            text-align: center;
+        }
+
+        #skill1 {
+            grid-area: skill1;
+        }
+        #skill2 {
+            grid-area: skill2;
+        }
+        #skill3 {
+            grid-area: skill3;
+        }
+        #skill4 {
+            grid-area: skill4;
+        }
+        img {
+            width: 100%;
+            max-width: 100px;
+            height: auto;
+        }
     </style>
 </head>
 
 <body>
-    <header>
+    <main class="container">
         <nav id = "nav-sidebar">
             <ul>
                 <li><a href="index.html">About Me</a></li>
@@ -23,24 +81,23 @@
                 <li><a href="contact.html">Contact Me</a></li>
             </ul>
         </nav>
-    </header>
-    <main>
         <h2>Skills</h2>
-        <hr>
-            <ul>
-                <li><img src="images/HTML-ICON.png" alt="HTML-Icon" width="100" height="100"><br>
-                    <span><b>HTML</b></span>
-                </li>
-                <li><img src="images/CSS-ICON.jpg" alt="CSS-Icon" width="100" height="100"><br>
-                    <span><b>CSS</b></span>
-                </li>
-                <li><img src="images/JS-ICON.png" alt="JavaScript-Icon" width="100" height="100"><br>
-                    <span><b>JavaScript</b></span>
-                </li>
-                <li><img src="images/FIGMA-ICON.png" alt="Figma-Icon" width="100" height="100"><br>
-                    <span><b>Figma</b></span>
-                </li>
-            </ul>
+        <section id="skill1">
+            <h3>HTML</h3>
+            <img src="images/HTML-ICON.png" alt="HTML-Icon">
+        </section>
+        <section id="skill2">
+            <h3>CSS</h3>
+            <img src="images/CSS-ICON.jpg" alt="CSS-Icon">
+        </section>
+        <section id="skill3">
+            <h3>JavaScript</h3>
+            <img src="images/JS-ICON.png" alt="JavaScript-Icon">
+        </section>
+        <section id="skill4">
+            <h3>Figma</h3>
+            <img src="images/FIGMA-ICON.png" alt="Figma-Icon">
+        </section>
     </main>
 
     <noscript>Javascript is disabled, some features may not work properly.</noscript>

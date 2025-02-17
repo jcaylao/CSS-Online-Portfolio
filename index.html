@@ -7,105 +7,110 @@
     <meta name="keywords" content="HTML">
     <meta name="author" content="Jaira">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles/main.css" rel="stylesheet">
     <title>About me page</title>
     <style>
-        :root {
-            --primary-bg: white;
-            --text-color: black;
-            --nav-bg: #6d2932;
-            --nav-ul-li-a-text-color: white;
-            --nav-ul-li-a-hover-bg-color: #97595e;
-            --nav-ul-li-a-hover-text-color: white;
-
-        }
-        body {
-            font-family: Comic Sans MS, Comic Sans, cursive;
-        }
         .container {
             display: grid;
-            grid-template-columns: repeat(auto-fill, 250px);
-            grid-template-rows: 200px 200px 250px 50px;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: 250px 100px 220px;
+            gap: 10px;
             grid-template-areas:
-                "   aboutMe   aboutMe   .   .         nav"
-                "   .   .   picture               picture   nav"
-                "   hgroup   hgroup   hgroup   .      nav"
-                "   .   .   .   .                     nav"
-                "   footer  footer  footer  footer    nav";
+            "   aboutMe   aboutMe  . picture     nav"
+            "   .      .        .     picture   nav"
+            "hgroup hgroup hgroup picture nav"
         }
-
+        /* Mobile */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr;
+                grid-template-areas:
+                "nav"
+                "aboutMe"
+                "picture"
+                "hgroup";
+            }
+        }
+        /* Tablet & Restrictive Laptop Screens */
+        @media (min-width: 769px) and (max-width: 1200px) {
+            .container {
+                grid-template-columns: 2fr 1fr; /* Adjusts proportions */
+                grid-template-areas:
+            "aboutMe aboutMe nav"
+            "picture picture nav"
+            "hgroup hgroup nav";
+            }
+        }
         /* Nav bar styling */
         nav {
             grid-area: nav;
+            width: 100%;
             background-color: #6d2932;
             margin: 0;
             padding: 0;
         }
-
         nav ul {
             list-style: none;
             margin: 0;
             padding: 0;
         }
-
         nav ul li a {
             display: block;
             width: 100%;
-            padding: 20px 0 20px 5px;
+            padding: 20px 0 20px 0;
+            margin: 10px 0 10px 0;
             text-decoration: none;
             color: white;
-            font-size: calc(1.2dvw + 1dvh);
+            font-size: calc(1dvw + 1dvh);
             background: transparent;
         }
-
         nav ul li a:hover {
             background: #97595e;
             color: #fff;
         }
-
         body {
             padding: 0;
             margin: 0;
-        }
-        header {
-            grid-area: header;
-            text-align: center;
         }
         .aboutMe {
             grid-area: aboutMe;
             padding: 0 20px;
         }
         .aboutMe h2{
-            font-size: calc(3dvw + 1dvh);
+            font-size: calc(2.7dvw + 1dvh);
         }
         .aboutMe h3{
-            font-size: calc(1.75dvw + 1dvh);
+            font-size: calc(1.5dvw + 1dvh);
         }
         picture {
             grid-area: picture;
             align-content: center;
-        }
-        img {
-            width: 100%;
+            width: 20vw;
             height: auto;
-            max-width: 250px;
             display: block;
             margin: 0 auto;
+        }
+        #self-portrait {
+            width: 18dvw;
+            height: auto;
+            display: block;
+        }
+        #git-icon {
+            width: 5dvw;
+            height: auto;
+            padding: 10px;
+            display: block;
         }
         hgroup {
             grid-area: hgroup;
             padding: 20px;
         }
         hgroup h2{
-            font-size: calc(1.5dvw + 1dvh);
+            font-size: calc(1.3dvw + 1dvh);
         }
         hgroup p {
-            font-size: calc(1.25dvw + 0.75dvh);
-        }
-        footer {
-            grid-area: footer;
-            text-align: end;
-            padding-right: 20px;
-            font-size: calc(0.75dvw + 0.75dvh);
+            font-size: calc(0.9dvw + 0.75dvh);
         }
     </style>
 </head>
@@ -124,6 +129,9 @@
                 <li><a href="skills.html">Skills</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="contact.html">Contact Me</a></li>
+                <li><a href="https://github.com/jcaylao">
+                    <img id="git-icon" src="images/GITHUB-ICON.png" alt="Github icon">
+                </a></li>
             </ul>
         </nav>
 
@@ -139,16 +147,9 @@
         <picture>
             <source media="(max-width: 767px)" srcset="images/selfPortrait.webp" type="image/webp">
             <source media="(min-width: 1024px)" srcset="images/selfPortrait.jpg" type="image/jpeg">
-            <img src="images/selfPortrait.png" alt="cartoon me">
+            <img id="self-portrait" src="images/selfPortrait.png" alt="cartoon me">
         </picture>
     </main>
-
-    <footer>
-        <address>
-            Made with &hearts; by <a href="mailto:jairavcaylao@gmail.com">Jaira Caylao</a><br>
-            Copyright &copy; 2025
-        </address>
-    </footer>
 
     <!--Custom element script-->
     <script>
