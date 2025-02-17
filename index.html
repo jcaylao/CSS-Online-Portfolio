@@ -24,10 +24,10 @@
         .container {
             display: grid;
             grid-template-columns: repeat(auto-fill, 250px);
-            grid-template-rows: repeat(auto-fill, 50px);
+            grid-template-rows: 200px 200px 250px 50px;
             grid-template-areas:
                 "   aboutMe   aboutMe   .   .         nav"
-                "   .   .   .               picture   nav"
+                "   .   .   picture               picture   nav"
                 "   hgroup   hgroup   hgroup   .      nav"
                 "   .   .   .   .                     nav"
                 "   footer  footer  footer  footer    nav";
@@ -50,10 +50,10 @@
         nav ul li a {
             display: block;
             width: 100%;
-            padding: 20px 1px 20px 5px;
+            padding: 20px 0 20px 5px;
             text-decoration: none;
             color: white;
-            font-size: 1.2rem;
+            font-size: calc(1.2dvw + 1dvh);
             background: transparent;
         }
 
@@ -72,13 +72,40 @@
         }
         .aboutMe {
             grid-area: aboutMe;
+            padding: 0 20px;
+        }
+        .aboutMe h2{
+            font-size: calc(3dvw + 1dvh);
+        }
+        .aboutMe h3{
+            font-size: calc(1.75dvw + 1dvh);
         }
         picture {
             grid-area: picture;
             align-content: center;
         }
+        img {
+            width: 100%;
+            height: auto;
+            max-width: 250px;
+            display: block;
+            margin: 0 auto;
+        }
         hgroup {
             grid-area: hgroup;
+            padding: 20px;
+        }
+        hgroup h2{
+            font-size: calc(1.5dvw + 1dvh);
+        }
+        hgroup p {
+            font-size: calc(1.25dvw + 0.75dvh);
+        }
+        footer {
+            grid-area: footer;
+            text-align: end;
+            padding-right: 20px;
+            font-size: calc(0.75dvw + 0.75dvh);
         }
     </style>
 </head>
@@ -101,7 +128,7 @@
         </nav>
 
         <hgroup>
-            <h2>About Me</h2>
+            <h2>About Me...</h2>
             <p>I specialize in creating user-friendly websites and apps, as they are easy to use and navigate in order
                 to meet user needs. With a major in Cognitive Science focusing on Design & Interaction and a minor in
                 Computer Science, I have developed a strong foundation in design principles and coding. Some of my
@@ -110,9 +137,9 @@
             </p>
         </hgroup>
         <picture>
-            <source srcset="images/selfPortrait.webp" type="image/webp" width="80%">
-            <source srcset="images/selfPortrait.jpg" type="image/jpeg" width="80%">
-            <img src="images/selfPortrait.png" alt="cartoon me" width="295">
+            <source media="(max-width: 767px)" srcset="images/selfPortrait.webp" type="image/webp">
+            <source media="(min-width: 1024px)" srcset="images/selfPortrait.jpg" type="image/jpeg">
+            <img src="images/selfPortrait.png" alt="cartoon me">
         </picture>
     </main>
 
