@@ -1,41 +1,14 @@
+:root {
+    --primary-bg: white;
+    --text-color: black;
+    --nav-bg: #6d2932;
+    --nav-ul-li-a-text-color: white;
+    --nav-ul-li-a-hover-bg-color: #97595e;
+    --nav-ul-li-a-hover-text-color: white;
+}
+
 body {
     font-family: Comic Sans MS, Comic Sans, cursive;
-}
-
-.container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, 250px);
-    grid-template-rows: repeat(auto-fill, 50px);
-    grid-template-areas:
-    ".   .   .   .   ."
-}
-
-/* Nav bar styling */
-nav {
-    grid-column: 5;
-    grid-row: 1/5;
-    background-color: #6d2932;
-    margin: 0;
     padding: 0;
-}
-
-nav ul {
-    list-style: none;
     margin: 0;
-    padding: 0;
-}
-
-nav ul li a {
-    display: block;
-    width: 100%;
-    padding: 20px 1px 20px 5px;
-    text-decoration: none;
-    color: white;
-    font-size: 1.2rem;
-    background: transparent;
-}
-
-nav ul li a:hover {
-    background: #97595e;
-    color: #fff;
 }
