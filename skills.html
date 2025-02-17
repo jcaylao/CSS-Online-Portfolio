@@ -13,12 +13,12 @@
         .container {
             display: grid;
             grid-template-columns: repeat(5, 1fr);
-            grid-template-rows: repeat(auto-fill, 150px);
+            grid-template-rows: 0.1fr 1fr 1fr 0.1fr;
             grid-template-areas:
             "   h2 h2  .  . nav"
             "   .   skill1   skill2    .    nav"
             "   .   skill3   skill4    .    nav"
-            "   .   .   .              .    nav";
+            ". . . . nav"
         }
         /* Mobile */
         @media (max-width: 768px) {
@@ -92,19 +92,19 @@
         <h2>Skills</h2>
         <section id="skill1">
             <h3>HTML</h3>
-            <img src="images/HTML-ICON.png" alt="HTML-Icon">
+            <img src="images/HTML-ICON.webp" alt="HTML Icon" loading="lazy">
         </section>
         <section id="skill2">
             <h3>CSS</h3>
-            <img src="images/CSS-ICON.jpg" alt="CSS-Icon">
+            <img src="images/CSS-ICON.webp" alt="CSS Icon" loading="lazy">
         </section>
         <section id="skill3">
             <h3>JavaScript</h3>
-            <img src="images/JS-ICON.png" alt="JavaScript-Icon">
+            <img src="images/JS-ICON.webp" alt="JavaScript Icon" loading="lazy">
         </section>
         <section id="skill4">
             <h3>Figma</h3>
-            <img src="images/FIGMA-ICON.png" alt="Figma-Icon">
+            <img src="images/FIGMA-ICON.webp" alt="Figma Icon" loading="lazy">
         </section>
     </main>
 

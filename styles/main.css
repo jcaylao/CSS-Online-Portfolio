@@ -19,6 +19,7 @@ nav {
     background-color: #6d2932;
     margin: 0;
     padding: 0;
+    height: 100%;
 }
 nav ul {
     list-style: none;
@@ -28,7 +29,7 @@ nav ul {
 nav ul li a {
     display: block;
     width: 100%;
-    padding: 20px 0 20px 5px;
+    padding: 20px 0 20px 0;
     text-decoration: none;
     color: white;
     font-size: calc(1.2dvw + 1dvh);
