@@ -35,43 +35,12 @@
         /* Tablet & Restrictive Laptop Screens */
         @media (min-width: 769px) and (max-width: 1200px) {
             .container {
-                grid-template-columns: 2fr 1fr; /* Adjusts proportions */
+                grid-template-columns: 2fr 1fr;
                 grid-template-areas:
             "aboutMe aboutMe nav"
             "picture picture nav"
             "hgroup hgroup nav";
             }
-        }
-        /* Nav bar styling */
-        nav {
-            grid-area: nav;
-            width: 100%;
-            background-color: #6d2932;
-            margin: 0;
-            padding: 0;
-        }
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-        nav ul li a {
-            display: block;
-            width: 100%;
-            padding: 20px 0 20px 0;
-            margin: 10px 0 10px 0;
-            text-decoration: none;
-            color: white;
-            font-size: calc(1dvw + 1dvh);
-            background: transparent;
-        }
-        nav ul li a:hover {
-            background: #97595e;
-            color: #fff;
-        }
-        body {
-            padding: 0;
-            margin: 0;
         }
         .aboutMe {
             grid-area: aboutMe;
@@ -94,12 +63,6 @@
         #self-portrait {
             width: 18dvw;
             height: auto;
-            display: block;
-        }
-        #git-icon {
-            width: 5dvw;
-            height: auto;
-            padding: 10px;
             display: block;
         }
         hgroup {
@@ -129,13 +92,6 @@
                 <li><a href="skills.html">Skills</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="contact.html">Contact Me</a></li>
-                <li><a href="https://github.com/jcaylao">
-                    <picture>
-                        <source media="(max-width: 767px)" srcset="images/github-white.webp" type="image/webp">
-                        <source media="(min-width: 1024px)" srcset="images/github-white.jpg" type="image/jpeg">
-                        <img src="images/github-white.png" alt="cartoon me">
-                    </picture>
-                </a></li>
             </ul>
         </nav>
 

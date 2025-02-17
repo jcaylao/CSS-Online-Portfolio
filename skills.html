@@ -15,42 +15,47 @@
             grid-template-columns: repeat(5, 1fr);
             grid-template-rows: repeat(auto-fill, 150px);
             grid-template-areas:
-            "   .   h2  .    . nav"
+            "   h2 h2  .  . nav"
             "   .   skill1   skill2    .    nav"
             "   .   skill3   skill4    .    nav"
             "   .   .   .              .    nav";
         }
-        /* Nav bar styling */
-        nav {
-            grid-area: nav;
-            background-color: #6d2932;
-            margin: 0;
-            padding: 0;
+        /* Mobile */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr 1fr;
+                grid-template-areas:
+                "nav nav"
+                "h2 h2"
+                "skill1 skill2"
+                "skill3 skill4";
+            }
         }
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-        nav ul li a {
-            display: block;
-            width: 100%;
-            padding: 20px 0 20px 5px;
-            text-decoration: none;
-            color: white;
-            font-size: calc(1.2dvw + 1dvh);
-            background: transparent;
-        }
-        nav ul li a:hover {
-            background: #97595e;
-            color: #fff;
-        }
+        /* Tablet & Restrictive Laptop Screens */
+        @media (min-width: 769px) and (max-width: 1200px) {
+            .container {
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-rows: 0.5fr 1fr 1fr;
+                grid-template-areas:
+                "h2 . . nav"
+                ". skill1 skill2 nav"
+                ". skill3 skill4 nav";
 
+            }
+        }
         h2 {
             grid-area: h2;
-            text-align: center;
+            padding-left: 20px;
+            font-size: calc(2.7dvw + 1dvh);
         }
-
+        section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            height: 100%;
+        }
         #skill1 {
             grid-area: skill1;
         }
@@ -62,6 +67,9 @@
         }
         #skill4 {
             grid-area: skill4;
+        }
+        h3{
+            font-size: calc(1.2dvw + 1dvh);
         }
         img {
             width: 100%;
