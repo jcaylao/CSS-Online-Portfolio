@@ -64,6 +64,10 @@
             width: 18dvw;
             height: auto;
             display: block;
+            transition: transform 0.6s ease-in-out;
+        }
+        #self-portrait:hover {
+            transform: rotate(360deg);
         }
         hgroup {
             grid-area: hgroup;
@@ -105,9 +109,9 @@
             </p>
         </hgroup>
         <picture>
-            <source media="(max-width: 768px)" srcset="images/selfPortrait.webp" type="image/webp">
-            <source media="(min-width: 1024px)" srcset="images/selfPortrait.jpg" type="image/jpeg">
-            <img id="self-portrait" src="images/selfPortrait.png" alt="here is a cartoon image of myself" loading="lazy">
+            <source media="(max-width: 768px)" srcset="images/Self-portrait.webp" type="image/webp">
+            <source media="(min-width: 1024px)" srcset="images/Self-portrait.svg" type="image/svg">
+            <img id="self-portrait" src="images/Self-portrait.svg" alt="here is a cartoon image of myself" loading="lazy">
         </picture>
     </main>
 

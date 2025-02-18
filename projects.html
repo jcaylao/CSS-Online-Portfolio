@@ -24,7 +24,7 @@
         @media (max-width: 768px) {
             .container {
                 grid-template-columns: 1fr 1fr;
-                grid-template-rows: 1fr;
+                grid-template-rows: repeat(3, 1fr);
                 grid-template-areas:
                 "nav nav"
                 "h1 h1"
@@ -34,11 +34,12 @@
         /* Tablet & Restrictive Laptop Screens */
         @media (min-width: 769px) and (max-width: 1200px) {
             .container {
-                grid-template-columns: 1fr 1fr;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(3, 0.5fr);
                 grid-template-areas:
-                "nav nav"
-                "h1 h1"
-                "img hgroup"
+                "h1 h1 nav"
+                "img hgroup nav"
+                ". . nav"
             }
         }
         h1 {

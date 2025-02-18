@@ -23,8 +23,8 @@
         /* Mobile */
         @media (max-width: 768px) {
             .container {
-                grid-template-columns: 1fr;
-                grid-template-rows: 1fr 1fr;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr;
                 grid-template-areas:
                 "nav nav"
                 "h2 h2"
@@ -39,8 +39,8 @@
                 grid-template-rows: 0.5fr 1fr 1fr;
                 grid-template-areas:
                 "h2 . . nav"
-                ". skill1 skill2 nav"
-                ". skill3 skill4 nav";
+                "skill1 skill2 . nav"
+                "skill3 skill4 . nav";
 
             }
         }
@@ -72,8 +72,7 @@
             font-size: calc(1.2dvw + 1dvh);
         }
         img {
-            width: 100%;
-            max-width: 100px;
+            width: 10dvw;
             height: auto;
         }
     </style>
